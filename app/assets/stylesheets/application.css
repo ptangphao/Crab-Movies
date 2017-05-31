@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
 body {
   background-image: url("https://unsplash.it/1900/1200?image=579");
 }
@@ -21,22 +23,52 @@ body {
 }
 
 .title{
+  letter-spacing: 0.02em;
+  font-family: Raleway, Arial;
+  -webkit-font-smoothing: antialiased;
   color:white;
-  width:15em;
+  width:13em;
   margin:auto;
   text-align: center;
   font-size: 430%;
 }
 
 .logs{
-  width:15em;
+  width:12em;
   float: right;
   margin:-55px 30px 0px 0px;
   text-align:center;
 }
 .logs p {
+  font-family: Raleway, Arial;
   color:lightgrey;
   display: inline-block;
   padding-right:10px;
   font-size:120%;
 }
+
+.categories_list{
+  width:70%;
+  margin:auto;
+  text-align:center;
+}
+.categories_list p{
+  font-family: Raleway, Arial;
+  display: inline-block;
+  font-size:300%;
+  width:5em;
+  height:1.5em;
+  background-color:white;
+  padding-top:15px;
+  opacity: .7;
+  margin-left:1em;
+  border-radius: 10px;
+}
+
+.body-wrapper{
+  width:70%;
+  margin:auto;
+  background-color:white;
+  opacity: .7;
+}
+
