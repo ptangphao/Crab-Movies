@@ -3,11 +3,18 @@
 <head>
   <title>Paperclip</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="header">
+  <h1 class="title">earls movies</h1>
+  <div class="logs">
+    <p>login</p>
+    <p>sign up</p>
+  </div>
+</div>
 <%= yield %>
 
 </body>
