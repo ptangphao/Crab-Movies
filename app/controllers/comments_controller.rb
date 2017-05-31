@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :route, only: [:create, :destroy]
+
   def new
     @comment = Comment.new
   end
@@ -7,7 +9,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to @comment.movie
+      redirect_to @route
     else
       render 'new'
     end
@@ -15,15 +17,18 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @movie = @comment.movie
     @comment.destroy
 
-    redirect_to @movie
+    redirect_to @route
   end
 
   private
   def comment_params
     params.require(:comment).permit(:user_id, :commentable_id,
                                     :commentable_type, :body)
+  end
+
+  def route
+    @route = RedirectionService.new().route
   end
 end
