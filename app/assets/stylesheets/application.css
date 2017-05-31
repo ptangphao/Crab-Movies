@@ -66,9 +66,12 @@ body {
 }
 
 .body-wrapper{
+  font-family: Raleway, Arial;
   width:70%;
   margin:auto;
   background-color:white;
   opacity: .7;
+  border-radius: 10px;
+}
 }
 
