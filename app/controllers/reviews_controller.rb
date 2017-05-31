@@ -29,6 +29,6 @@ class ReviewsController < ApplicationController
   end
 
   def route
-    @route = RedirectionService.new().route
+    @route = RedirectionService.new.route
   end
 end

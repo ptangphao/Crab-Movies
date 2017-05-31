@@ -4,5 +4,4 @@ class MoviesController < ApplicationController
     session[:page_type] = "Movie"
     session[:page_id] = @movie.id
   end
-
 end

@@ -29,6 +29,6 @@ class CommentsController < ApplicationController
   end
 
   def route
-    @route = RedirectionService.new().route
+    @route = RedirectionService.new.route
   end
 end
