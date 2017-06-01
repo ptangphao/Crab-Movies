@@ -153,3 +153,7 @@ text-decoration: none;
 .field{
   width:20em;
 }
+.rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}
