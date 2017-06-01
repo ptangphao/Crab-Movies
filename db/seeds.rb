@@ -22,7 +22,7 @@ imdb = ImdbParty::Imdb.new(:anonymize => true)
 #The next one is the production version, it makes 250 API calls
 #top_250 = imdb.top_250.map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
 #The next one is for development, it only makes 5 API calls.
-top_250 = imdb.top_250[0..49].map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
+top_250 = imdb.top_250.map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
 top_250_movies = top_250.map{|movie_id| imdb.find_movie_by_id(movie_id)}
 
 # Creating genres
@@ -65,7 +65,8 @@ top_250_movies.each do |movie|
     writer:      movie.writers[0].name,
     director:    movie.directors[0].name,
     year:        movie.release_date[0..3],
-    category_id: genres_of_top_250.index(movie.genres[0]) + 1})
+    category_id: genres_of_top_250.index(movie.genres[0]) + 1,
+    poster_url: movie.poster_url})
 end
 
 # Create actor_movies
@@ -80,15 +81,3 @@ top_250_movies.each_with_index do |movie, index|
       })
   end
 end
-# ??????????????????
-# Create actors_movies
-
-# top_250_movies.each_with_index do |movie,index|
-#   current_movie_id = (index + 1)
-#   movie.actors.each do |actor|
-#     current_actor = Actor.find_by(name: actor.name)
-#     current_movie = Movie.find(current_movie_id)
-#     current_actor.movies << current_movie
-#   end
-# end
-

@@ -85,12 +85,37 @@ body {
   width:70%;
   margin:auto;
   background-color:white;
-  opacity: .7;
+  opacity: .85;
   border-radius: 10px;
+}
+
+
+.movie-pic {
+  height: 20em;
+  width: 10em;
+  display: inline-block;
+}
+
+.minor-title {
+  font-family: Raleway, Arial;
+  text-align: center;
 }
 
 
 .movie_link a{
  color: black;
 text-decoration: none; 
+}
+
+.movie-wrapper{
+}
+
+.movie-partial{
+  display: inline-block;  
+  margin:auto;
+  width:10em;
+  vertical-align: top;
+}
+.movie-partial a{
+  text-decoration: none
 }

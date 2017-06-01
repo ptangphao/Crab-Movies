@@ -29,11 +29,6 @@ ActiveRecord::Schema.define(version: 20170601003956) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "actors_movies", force: :cascade do |t|
-    t.integer "actor_id"
-    t.integer "movie_id"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -54,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170601003956) do
     t.string   "writer"
     t.string   "director"
     t.integer  "year"
+    t.string   "poster_url"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
