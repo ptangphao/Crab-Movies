@@ -19,6 +19,9 @@ body {
   background-image: url("https://unsplash.it/1900/1200?image=579");
 }
 
+a{
+  text-decoration: none;
+}
 .header{
   height:7em;
 }
@@ -124,6 +127,29 @@ text-decoration: none;
   padding:1em;
 }
 .movie-partial a{
-  text-decoration: none
+  text-decoration: none;
 }
 
+.show-container{
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.review-display{
+  width:40em;
+  border-bottom:solid;
+  margin:auto;
+  border-width:1px;
+}
+
+.login_title{
+  width:20em;
+}
+
+.login_signup{
+
+}
+
+.field{
+  width:20em;
+}
