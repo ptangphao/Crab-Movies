@@ -1,4 +1,6 @@
 <div class="body-wrapper">
-  <h1 class="minor-title"><%= @category.name %></h1>
-  <%= render @category.movies %>
+  <div class="movie-wrapper">
+    <h1 class="minor-title"><%= @category.name %></h1>
+    <%= render @category.movies %>
+  </div>
 </div>
