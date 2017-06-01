@@ -4,4 +4,5 @@ class Movie < ActiveRecord::Base
 
   has_many :comments, as: :commentable
   has_many :reviews, as: :reviewable
+  belongs_to :categories
 end
