@@ -48,14 +48,22 @@ body {
   padding-right:10px;
   font-size:120%;
 }
+.logs a {
+  font-family: Raleway, Arial;
+  color:lightgrey;
+  display: inline-block;
+  font-size:120%;
+  text-decoration: none
+}
+
 .home a{
-  float:right;
+  font-family: Raleway, Arial;
+  float:left;
   text-decoration: none;
   color:lightgrey;
-  font-size:120%;
-  margin-top:-35px;
-  margin-left: 3em;
-  font-family: Raleway, Arial;
+  font-size:160%;
+  margin-top:-44px;
+  margin-left: 4.4em;
 }
 
 .categories_list{
@@ -107,8 +115,6 @@ body {
 text-decoration: none; 
 }
 
-.movie-wrapper{
-}
 
 .movie-partial{
   display: inline-block;  

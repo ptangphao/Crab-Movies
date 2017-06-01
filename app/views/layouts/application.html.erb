@@ -12,8 +12,12 @@
   <h1 class="title">movies</h1>
   <p class="home"><%= link_to "home", root_path %></p>
   <div class="logs">
-    <p>login</p>
-    <p>sign up</p>
+  <% if user_signed_in? %>
+    <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %></p>
+  <% else %>
+    <p><%= link_to "login", new_user_session_path %></p>
+    <p><%= link_to "sign up", new_user_registration_path %></p>
+  <% end %>
   </div>
 </div>
 <%= yield %>
