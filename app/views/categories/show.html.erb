@@ -1,3 +1,6 @@
 <div class="body-wrapper">
   <h1><%= @category.name %></h1>
+  <% @category.movies.each do |movie| %>
+    <p class="movie_link"><%= link_to movie.title, movie_path(movie) %></p>
+  <% end  %>
 </div>
