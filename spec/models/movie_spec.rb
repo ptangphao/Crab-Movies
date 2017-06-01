@@ -34,12 +34,13 @@ describe Movie do
     expect(movie.poster_url == "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg").to be_truthy
   end
 
-  it "has an associated category" do
-    expect(movie.category_id).to eq category.id
-  end
-
-  it "should have a category" do
+  it "should belong to a category" do
     t = Movie.reflect_on_association(:categories)
     t.macro.should == :belongs_to
+  end
+
+  it "should have many actors" do
+    t = Movie.reflect_on_association(:actors)
+    t.macro.should == :has_many
   end
 end
