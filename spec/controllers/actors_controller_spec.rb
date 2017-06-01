@@ -35,6 +35,5 @@ describe ActorsController do
       get :show, {id: actor.id}
       expect(response).to render_template(:show)
     end
-
   end
 end
