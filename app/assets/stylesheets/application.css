@@ -85,7 +85,7 @@ body {
   width:70%;
   margin:auto;
   background-color:white;
-  opacity: .85;
+  opacity: .88;
   border-radius: 10px;
 }
 
@@ -115,7 +115,9 @@ text-decoration: none;
   margin:auto;
   width:10em;
   vertical-align: top;
+  padding:1em;
 }
 .movie-partial a{
   text-decoration: none
 }
+
