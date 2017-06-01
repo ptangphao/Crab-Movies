@@ -8,6 +8,6 @@ describe Actor do
 
   it "should have many movies" do
     t = Actor.reflect_on_association(:movies)
-    t.macro.should == :has_many
+    expect(t.macro == :has_many).to be_truthy
   end
 end
