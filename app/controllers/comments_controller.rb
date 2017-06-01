@@ -1,18 +1,10 @@
 class CommentsController < ApplicationController
   before_action :route, only: [:create, :destroy]
 
-  def new
-    @comment = Comment.new
-  end
-
   def create
     @comment = Comment.new(comment_params)
-
-    if @comment.save
-      redirect_to @route
-    else
-      render 'new'
-    end
+    @comment.save
+    redirect_to @route
   end
 
   def destroy
