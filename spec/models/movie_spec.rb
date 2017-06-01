@@ -38,5 +38,8 @@ describe Movie do
     expect(movie.category_id).to eq category.id
   end
 
-  it "should"
+  it "should have a category" do
+    t = Movie.reflect_on_association(:categories)
+    t.macro.should == :belongs_to
+  end
 end
