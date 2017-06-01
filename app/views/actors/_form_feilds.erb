@@ -1,0 +1,13 @@
+<fieldset class="rating">
+	<%= form_for(@actor) do |f| %>
+	  <span class="gbn"><%= label_tag(:reviews, "Great") %>
+	  <%= radio_button_tag(:reviews, "Great") %><br>
+	  </span>
+	  <%= label_tag(:reviews, "Average") %>
+		<%= radio_button_tag(:reviews, "Average") %><br>
+		<%= label_tag(:reviews, "Terrible") %>
+		<%= radio_button_tag(:reviews, "Terrible") %><br>
+
+	  <%= f.submit :create %>
+	<% end %>
+</fieldset>
