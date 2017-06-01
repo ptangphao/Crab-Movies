@@ -26,6 +26,14 @@ describe CategoriesController do
       expect(response).to have_http_status 200
     end
 
+    it "assigns the correct category as @category" do
+      get :show, {id: category.id}
+      expect(assigns(:category)).to eq(category)
+    end
 
+    it "renders the :show template" do
+      get :show, {id: category.id}
+      expect(response).to render_template(:show)
+    end
   end
 end
