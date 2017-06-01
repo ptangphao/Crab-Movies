@@ -7,6 +7,9 @@ describe ActorsController do
       expect(response).to have_http_status 200
     end
 
-
+    it "assigns all actors as @actors" do
+      get :index
+      expect(assigns(:actors)).to eq(Actor.all)
+    end
   end
 end
