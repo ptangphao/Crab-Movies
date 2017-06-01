@@ -15,6 +15,11 @@ describe MoviesController do
       expect(response).to have_http_status 200
     end
 
+    it "assigns the correct movie as @movie" do
+      get :show, {id: movie.id}
+      expect(assigns(:movie)).to eq(movie)
+    end
+
 
   end
 end
