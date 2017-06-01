@@ -20,6 +20,9 @@ describe MoviesController do
       expect(assigns(:movie)).to eq(movie)
     end
 
-
+    it "renders the :show template" do
+      get :show, {id: movie.id}
+      expect(response).to render_template(:show)
+    end
   end
 end
