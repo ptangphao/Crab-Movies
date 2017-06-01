@@ -1,4 +1,13 @@
 <div class="body-wrapper">
+  <div class="show-container">
   <h1 class="minor-title"><%= @actor.name %></h1>
-  <%= render 'actors/form' %>
+  <% @actor.movies.each do |movie| %>
+    <p><%= link_to movie.title, movie_path(movie)  %></p>
+  <% end  %>
+  <%= render 'reviews/form' %><br>
+  <h2>Rating</h2>
+  <div class="rating">
+      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </div>
+  </div>
 </div>
