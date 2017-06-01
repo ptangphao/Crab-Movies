@@ -5,6 +5,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :writer
       t.string :director
       t.integer :year
+      t.string :poster_url
       t.integer :category_id
 
       t.timestamps null: false
