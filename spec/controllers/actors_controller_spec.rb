@@ -30,5 +30,11 @@ describe ActorsController do
       get :show, {id: actor.id}
       expect(assigns(:actor)).to eq(actor)
     end
+
+    it "renders the :show template" do
+      get :show, {id: actor.id}
+      expect(response).to render_template(:show)
+    end
+
   end
 end
