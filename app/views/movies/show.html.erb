@@ -1,19 +1,39 @@
 <div class="body-wrapper">
-  <h1 class="minor-title"><%= @movie.title %></h1>
-  <img class="movie-pic" src="<%= @movie.poster_url %>">
-  <p>Director: <%= @movie.director %></p>
-  <p>Writer: <%= @movie.writer %></p>
-  <p>Release Year: <%= @movie.year %></p>
+  <div class="show-container">
+    <h1 class="minor-title"><%= @movie.title  %></h1>
+    <img class="movie-pic" src="<%=   @movie.poster_url %>">
+    <p>Director: <b><%= @movie.director %></b></p>
+    <p>Writer: <b><%= @movie.writer %></b></p>
+    <p>Release Year: <b><%= @movie.year %></b></p>
 
-  <p>
-    Actors:
-    <% @movie.actors.each do |actor| %>
-      <% if actor == @movie.actors.last %>
-        <%= link_to("#{actor.name}", actor) %>
-      <% else %>
-        <%= link_to("#{actor.name} | ", actor) %>
+    <p>
+      Actors:
+      <% @movie.actors.each do |actor| %>
+        <% if actor == @movie.actors.last %>
+          <%= link_to("#{actor.name}", actor)  %>
+        <% else %>
+          <%= link_to("#{actor.name} | ",   actor) %>
+        <% end %>
       <% end %>
+    </p>
+    <h2>Reviews</h2>
+    <% if @movie.reviews %>
+      <% @movie.reviews.each do |review| %>
+        <div class="review-display">
+        <p><%= review.body %></p>
+        </div>
+      <% end  %>
     <% end %>
-  </p>
+    <% if user_signed_in? %>
+    <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
+    <% end %>
+    <h2>Rating</h2>
+    <div class="rating">
+      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </div>
+    <% if user_signed_in? %>
+    <p>Rate:</p>
+    <% end %>
+  </div>
 </div>
 
