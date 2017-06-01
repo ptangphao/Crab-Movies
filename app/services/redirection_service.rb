@@ -1,5 +1,5 @@
 class RedirectionService
-  def initialize
+  def initialize(session)
     @type = session[:page_type]
     @id = session[:page_id]
   end
