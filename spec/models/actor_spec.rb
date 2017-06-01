@@ -13,4 +13,18 @@ describe Actor do
       expect(t.macro == :has_many).to be_truthy
     end
   end
+
+    describe "has associations" do
+      it "should have actor_movies" do
+        t = Actor.reflect_on_association(:actor_movies)
+        expect(t.macro == :has_many).to be_truthy
+      end
+    end
+
+    describe "has associations" do
+    it "should have revies" do
+      t = Actor.reflect_on_association(:reviews)
+      expect(t.macro == :has_many).to be_truthy
+    end
+  end
 end
