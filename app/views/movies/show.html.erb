@@ -1,0 +1,19 @@
+<div class="body-wrapper">
+  <h1 class="minor-title"><%= @movie.title %></h1>
+  <img class="movie-pic" src="<%= @movie.poster_url %>">
+  <p>Director: <%= @movie.director %></p>
+  <p>Writer: <%= @movie.writer %></p>
+  <p>Release Year: <%= @movie.year %></p>
+
+  <p>
+    Actors:
+    <% @movie.actors.each do |actor| %>
+      <% if actor == @movie.actors.last %>
+        <%= link_to("#{actor.name}", actor) %>
+      <% else %>
+        <%= link_to("#{actor.name} | ", actor) %>
+      <% end %>
+    <% end %>
+  </p>
+</div>
+

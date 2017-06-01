@@ -73,5 +73,17 @@ body {
   opacity: .7;
   border-radius: 10px;
 }
+
+.movie-pic {
+  height: 20em;
+  width: 10em;
+  display: inline-block;
+}
+
+.minor-title {
+  font-family: Raleway, Arial;
+  text-align: center;
+}
+
 }
 
