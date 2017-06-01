@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'faker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -31,6 +32,10 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'jeweler'
+gem 'shoulda'
+gem 'httparty'
+gem 'imdb_party'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
