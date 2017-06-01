@@ -25,5 +25,10 @@ describe ActorsController do
       get :show, {id: actor.id}
       expect(response).to have_http_status 200
     end
+
+    it "assigns the correct actor as @actor" do
+      get :show, {id: actor.id}
+      expect(assigns(:actor)).to eq(actor)
+    end
   end
 end
