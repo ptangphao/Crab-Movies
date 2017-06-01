@@ -20,4 +20,15 @@ describe CommentsController do
     end
   end
 
+    describe 'DELETE #destroy' do
+    it "responds with a status code 302" do
+      delete(:destroy, { comment: {user_id: 1,
+                                commentable_id: movie.id,
+                                commentable_type: "Movie",
+                                body: "laksjdf;alsdjf;asljkdfl;"}},
+                    {page_type: "Movie", page_id: movie.id})
+      expect(response).to have_http_status 302
+    end
+  end
+
 end
