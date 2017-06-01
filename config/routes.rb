@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :movies, only: [:show]
+  resources :movies, only: [:show] do
+    resources :reviews
+  end
   resources :categories, only: [:index, :show]
-  resources :actors, only: [:index, :show]
+  resources :actors, only: [:index, :show] do
+    resources :reviews
+  end
   resources :comments
   root to:"categories#index"
   # The priority is based upon order of creation: first created -> highest priority.

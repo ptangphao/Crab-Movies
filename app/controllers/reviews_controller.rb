@@ -2,8 +2,8 @@ class ReviewsController < ApplicationController
   before_action :route, only: [:create, :destroy]
 
   def create
-    @review = Review.create(review_params)
-
+    @review = Review.new(review_params)
+    @review.save
     redirect_to @route
   end
 
