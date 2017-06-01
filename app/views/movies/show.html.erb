@@ -25,7 +25,7 @@
       <% end  %>
     <% end %>
     <% if user_signed_in? %>
-    <%= render 'reviews/form' %><br>
+    <%= render 'reviews/form', locals:{type: "Movie"} %><br>
     <% end %>
     <h2>Rating</h2>
     <div class="rating">
