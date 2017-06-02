@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :movies, only: [:show] do
     resources :reviews, only: [:create, :destroy] do
       resources :ratings, only: [:create]
+      resources :comments, only: [:create, :destroy]
     end
     resources :ratings, only: [:create]
+    resources :comments, only: [:create, :destroy]
   end
 
   resources :categories, only: [:index, :show]
@@ -13,10 +15,9 @@ Rails.application.routes.draw do
   resources :actors, only: [:index, :show] do
     resources :reviews, only: [:create, :destroy] do
       resources :ratings, only: [:create]
+      resources :comments, only: [:create, :destroy]
     end
   end
-
-  resources :comments, only: [:create, :destroy]
 
   root to:"categories#index"
 

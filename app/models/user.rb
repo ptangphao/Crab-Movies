@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def send_user_mail
     UserMailer.send_enabled_message(self).deliver
   end
+
+  def reviewer?
+    self.reviewer == true
+  end
 end
