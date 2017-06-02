@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170601170628) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,8 +51,11 @@ ActiveRecord::Schema.define(version: 20170601170628) do
     t.integer  "year"
     t.string   "poster_url"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "trailer_photo_url"
+    t.string   "trailer_url"
+    t.string   "plot"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "ratings", force: :cascade do |t|

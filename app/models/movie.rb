@@ -6,5 +6,5 @@ class Movie < ActiveRecord::Base
   has_many :reviews, as: :reviewable
   belongs_to :categories
 
-  validates_presence_of :title, :writer, :director, :year, :poster_url, :category_id
+  validates_presence_of :title, :writer, :director, :year, :poster_url, :category_id, :trailer_url, :plot, :trailer_photo_url
 end

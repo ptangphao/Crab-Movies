@@ -1,7 +1,9 @@
-<%= form_for([type, type.reviews.build]) do |f| %>
-  <%= f.text_area :body, size:"100x3" %><br>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.hidden_field :reviewable_type, value: session[:page_type] %>
-  <%= f.hidden_field :reviewable_id, value: session[:page_id] %>
-  <%= f.submit %>
+<% if user_signed_in? %>
+  <%= form_for([type, type.reviews.build]) do |f| %>
+    <%= f.text_area :body, size:"100x3" %><br>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :reviewable_type, value: session[:page_type] %>
+    <%= f.hidden_field :reviewable_id, value: session[:page_id] %>
+    <%= f.submit %>
+  <% end %>
 <% end %>

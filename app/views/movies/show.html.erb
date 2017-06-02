@@ -6,6 +6,12 @@
     <p>Writer: <b><%= @movie.writer %></b></p>
     <p>Release Year: <b><%= @movie.year %></b></p>
     <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
+    <p>Plot: <%= @movie.plot %></p>
+
+    <video width="400" controls>
+    <source src="<%= @movie.trailer_url %>" type="video/mp4">
+    <img src="<%= @movie.trailer_photo_url %>">
+    </video>
 
     <h2>Movie Rating</h2>
     <p class="rating-stars"><%= rating(@movie) %></p>
@@ -19,9 +25,7 @@
     <% if @movie.reviews %>
       <%= render @movie.reviews%>
     <% end %>
-    <% if user_signed_in? %>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
-    <% end %>
   </div>
 </div>
 
