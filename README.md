@@ -19,8 +19,24 @@ bundle
 be rake db:create
 be rake db:migrate
 be rspec
-# see all tests pass
+
 ```
+All tests should pass
+Or you can run:
+
+```
+be rspec ./spec/models/
+
+```
+...to see all specs related to our models
+Or run 
+```
+be rspec ./spec/mailers/
+```
+...to see all specs related to our mailers
+
+We also have tests for our controllers, helpers and routes.
+Thanks for testing us!
 
 ## Contributing
 
