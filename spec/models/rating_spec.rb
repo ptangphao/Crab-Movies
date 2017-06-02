@@ -33,7 +33,7 @@ describe Rating do
       expect(t.macro == :belongs_to).to be_truthy
     end
 
-    it "should belong to a user" do
+    it "should be rateable" do
       t = Rating.reflect_on_association(:rateable)
       expect(t.macro == :belongs_to).to be_truthy
     end
