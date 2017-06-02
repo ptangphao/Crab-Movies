@@ -29,8 +29,8 @@ Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for deta
 
 ## Authors
 
-**Gina Benavidez** - *Front End*
-[https://github.com/gbenavid]
+**[Gina Benavidez]** - *Front End*
+(https://github.com/gbenavid)
 
 **Ian Driscoll** - *Front End*
 [https://github.com/iand11]
