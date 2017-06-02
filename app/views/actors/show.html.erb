@@ -1,13 +1,10 @@
 <div class="body-wrapper">
   <div class="show-container">
   <h1 class="minor-title"><%= @actor.name %></h1>
-  <% @actor.movies.each do |movie| %>
-    <p><%= link_to movie.title, movie_path(movie)  %></p>
-  <% end  %>
-  <%= render 'reviews/form' %><br>
-  <h2>Rating</h2>
-  <div class="rating">
-      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-    </div>
-  </div>
-</div>
+  <%= render @actor.movies %>
+
+  <h2>Actor Reviews</h2>
+  <% if @actor.reviews %>
+    <%= render @actor.reviews %>
+  <% end %>
+  <%= render partial: 'reviews/form', locals: {type: @actor} %><br>
