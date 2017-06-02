@@ -1,16 +1,15 @@
 # PaperClip
 
-This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by provifding a platform that will foster unbiased opinions. 
+This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by providing a platform that will foster unbiased opinions. 
 
 ### Dependencies for local development:
 
 * Ruby (2.3.1)
 * Rails (4.2)
 
-
 ## Running the tests
 
-Explain how to run the automated tests for this system
+We have extensivly tested this repository to demonstrate the intent of our functionality and better articultae our motives, as well as track our feasibility. 
 
 ### Break down into end to end tests
 
