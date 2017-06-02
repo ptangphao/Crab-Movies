@@ -3,3 +3,11 @@
   <p class="username"><%= review.user.email %></p>
   <p class="created_at"><%= review.created_at.strftime("%A, %d %b %Y %l:%M %p") %></p>
 </div>
+
+<h2>Review Rating</h2>
+<%= rating(review) %>
+
+<% if user_signed_in? %>
+<p>Rate:</p>
+  <%= render partial: '/ratings/rating_buttons', locals: {type: review} %>
+<% end %>

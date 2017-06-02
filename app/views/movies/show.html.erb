@@ -15,7 +15,7 @@
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
     <% end %>
 
-    <h2>Rating</h2>
+    <h2>Movie Rating</h2>
     <%= rating(@movie) %>
 
     <% if user_signed_in? %>
