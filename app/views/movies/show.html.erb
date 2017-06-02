@@ -6,9 +6,10 @@
     <p>Writer: <b><%= @movie.writer %></b></p>
     <p>Release Year: <b><%= @movie.year %></b></p>
     <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
-    <p>Plot: <%= @movie.plot %></p>
+      
+    <p class="movie-plot"><%= @movie.plot %></p><br>
 
-    <video width="400" controls>
+    <video width="600" controls>
     <source src="<%= @movie.trailer_url %>" type="video/mp4">
     <img src="<%= @movie.trailer_photo_url %>">
     </video>
