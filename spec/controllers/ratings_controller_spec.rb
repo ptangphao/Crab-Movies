@@ -10,14 +10,14 @@ describe RatingsController do
               category_id: 1
               })}
 
-  describe 'post#create' do
-    it "creates new rating" do
-      post(:create, { rating: {user_id: 1,
-                                rateable_id: movie.id,
-                                rateable_type: "movie",
-                                rating: 1}},
-                                {page_type: "Movie", page_id: movie.id})
-      expect(response).to have_http_status 302
-    end
-  end
+  # describe 'post#create' do
+  #   it "creates new rating" do
+  #     post(:create, { rating: {user_id: 1,
+  #                               rateable_id: movie.id,
+  #                               rateable_type: "movie",
+  #                               rating: 1}},
+  #                               {page_type: "Movie", page_id: movie.id})
+  #     expect(response).to have_http_status 302
+  #   end
+  # end
 end
