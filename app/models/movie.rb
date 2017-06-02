@@ -5,4 +5,6 @@ class Movie < ActiveRecord::Base
   has_many :comments, as: :commentable
   has_many :reviews, as: :reviewable
   belongs_to :categories
+
+  validates_presence_of :title, :writer, :director, :year, :poster_url, :category_id
 end
