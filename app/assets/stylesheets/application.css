@@ -212,7 +212,8 @@ text-decoration: none;
   color:gold;
 }
 
-/*star-button > span:hover:before,
-.star-button > span:hover ~ span:before {
+.rating-stars{
+  padding:2px;
+  font-size: 130%;
   color:gold;
-}*/
+}
