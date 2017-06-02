@@ -13,8 +13,6 @@ We have extensivly tested this repository to demonstrate the intent of our funct
 
 ### A break down of our tests
 
-Explain what these tests test and why
-
 In the terminal
 ```
 bundle
@@ -26,7 +24,7 @@ be rspec
 
 ## Contributing
 
-Please (read)[https://gist.github.com/PurpleBooth/b24679402957c63ec426] for details on our code of conduct, and the process for submitting pull requests to us.
+Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
