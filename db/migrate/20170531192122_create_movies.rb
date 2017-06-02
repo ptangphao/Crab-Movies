@@ -7,6 +7,7 @@
       t.integer :year
       t.string :poster_url
       t.integer :category_id
+      t.string :trailer_photo_url
       t.string :trailer_url
       t.string :plot
 
