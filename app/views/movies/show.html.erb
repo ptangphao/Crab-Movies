@@ -25,9 +25,7 @@
     <% if @movie.reviews %>
       <%= render @movie.reviews%>
     <% end %>
-    <% if user_signed_in? %>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
-    <% end %>
   </div>
 </div>
 
