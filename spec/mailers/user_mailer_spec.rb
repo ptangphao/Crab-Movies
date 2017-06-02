@@ -10,4 +10,12 @@ RSpec.describe UserMailer, type: :mailer do
   it "renders the correct recipient email" do
     expect(mail.to[0]).to eq "earlsabal@gmail.com"
   end
+
+  it "renders the correct sender email" do
+    expect(mail.from[0]).to eq "crabbypaperclip@gmail.com"
+  end
+
+  it "renders the correct body" do
+    expect(mail.body.include?("Welcome to Crab Movies!")).to be_truthy
+  end
 end
