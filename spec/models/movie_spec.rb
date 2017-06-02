@@ -11,6 +11,9 @@ describe Movie do
               writer: "Jonathan Nolan",
               year: "2008",
               poster_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+              trailer_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+              trailer_photo_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+              plot: "scary shit happens",
               category_id: category.id
               })}
   describe "has attributes" do
@@ -64,35 +67,34 @@ describe Movie do
   end
 
   describe "has validations" do
-
     it 'is not valid without a title' do
-      movie.title = ''
+      movie.title = nil
       expect(movie).to_not be_valid
     end
 
 
     it 'is not valid without a writer' do
-      movie.writer = ''
+      movie.writer = nil
       expect(movie).to_not be_valid
     end
 
     it 'is not valid without a director' do
-      movie.director = ''
+      movie.director = nil
       expect(movie).to_not be_valid
     end
 
     it 'is not valid without a year' do
-      movie.year = ''
+      movie.year = nil
       expect(movie).to_not be_valid
     end
 
     it 'is not valid without a poster_url' do
-      movie.poster_url = ''
+      movie.poster_url = nil
       expect(movie).to_not be_valid
     end
 
     it 'is not valid without a category_id' do
-      movie.category_id = ''
+      movie.category_id = nil
       expect(movie).to_not be_valid
     end
   end
