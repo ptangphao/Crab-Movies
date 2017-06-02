@@ -17,61 +17,61 @@ ActiveRecord::Schema.define(version: 20170601170628) do
   enable_extension "plpgsql"
 
   create_table "actor_movies", force: :cascade do |t|
-    t.integer  "actor_id"
-    t.integer  "movie_id"
+    t.integer  "actor_id",   null: false
+    t.integer  "movie_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "actors", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
-    t.text     "body"
+    t.integer  "user_id",          null: false
+    t.integer  "commentable_id",   null: false
+    t.string   "commentable_type", null: false
+    t.text     "body",             null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "writer"
-    t.string   "director"
-    t.integer  "year"
-    t.string   "poster_url"
-    t.integer  "category_id"
-    t.string   "trailer_photo_url"
-    t.string   "trailer_url"
-    t.string   "plot"
+    t.string   "title",             null: false
+    t.string   "writer",            null: false
+    t.string   "director",          null: false
+    t.integer  "year",              null: false
+    t.string   "poster_url",        null: false
+    t.integer  "category_id",       null: false
+    t.string   "trailer_photo_url", null: false
+    t.string   "trailer_url",       null: false
+    t.string   "plot",              null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "rateable_id"
-    t.string   "rateable_type"
-    t.integer  "rating"
+    t.integer  "user_id",       null: false
+    t.integer  "rateable_id",   null: false
+    t.string   "rateable_type", null: false
+    t.integer  "rating",        null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "reviewable_id"
-    t.string   "reviewable_type"
-    t.text     "body"
+    t.integer  "user_id",         null: false
+    t.integer  "reviewable_id",   null: false
+    t.string   "reviewable_type", null: false
+    t.text     "body",            null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
