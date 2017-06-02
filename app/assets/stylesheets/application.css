@@ -17,6 +17,9 @@
 
 body {
   background-image: url("https://unsplash.it/1900/1200?image=579");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-size: cover;
 }
 
 a{
@@ -37,8 +40,6 @@ a{
   font-size: 430%;
 
 }
-
-
 
 
 .logs{
@@ -101,8 +102,7 @@ a{
   background-color:white;
   opacity: .88;
   border-radius: 10px;
-  /*text-align: center;*/
-
+  text-align: center;
 }
 
 

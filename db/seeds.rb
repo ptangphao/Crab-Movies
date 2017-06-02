@@ -9,10 +9,7 @@
 
 # User.create(email: 'botilko@yahoo.com', password: 'bob')
 
-Review.create(user_id: 1, reviewable_id: 1, reviewable_type: 'Movie', body: "This is a movie review" )
-Comment.create(user_id: 1, commentable_id: 1, commentable_type: 'Review', body: "This is a comment")
 
-Rating.create(user_id: 1, rateable_id: 1, rateable_type: 'Movie', rating: 5)
 
 # Random stuff from Patrick
 
