@@ -19,7 +19,7 @@ describe Actor do
     it 'is not valid without a name' do
       actor.name = nil
       expect(actor).to_not be_valid
-    end
+    end 
   end
 
 end
