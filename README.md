@@ -29,18 +29,15 @@ Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for deta
 
 ## Authors
 
-**Gina Benavidez** - [Front End](https://github.com/gbenavid)
+**Gina Benavidez** - [*Front End*](https://github.com/gbenavid)
 
 **Ian Driscoll** - [*Front End*](https://github.com/iand11)
 
-**Earl Sabal** - *Back End* - 
-[https://github.com/earlsabal]
+**Earl Sabal** - [*Back End*](https://github.com/earlsabal)
 
-**Patrick Tangphao** - *Back End* - 
-[https://github.com/ptangphao]
+**Patrick Tangphao** - [*Back End*](https://github.com/ptangphao)
 
-**Iliyan Ganevv** - *Full Stack* -
-[https://github.com/IliyanGanevv]
+**Iliyan Ganevv** - [*Full Stack*](https://github.com/IliyanGanevv)
 
 See also the list of [https://github.com/earlsabal/paperclip/graphs/contributors] who participated in this project.
 
