@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ReviewsController do
-  let (:movie) {Movie.create!({
+  let (:movie) {Movie.create({
               title: "The Dark Knight",
               director: "Christopher Nolan",
               writer: "Jonathan Nolan",
@@ -10,7 +10,7 @@ describe ReviewsController do
               category_id: 1
               })}
 
-  let (:review) {Review.create!({
+  let (:review) {Review.create({
               user_id: 1,
               reviewable_id: movie.id,
               reviewable_type: "Movie",
