@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Comment do
 
-  let (:comment) {
+  let(:comment) {
     Comment.new({
       user_id: 1,
       commentable_id: 1,
@@ -62,6 +62,5 @@ describe Comment do
       comment.body = nil
       expect(comment).to_not be_valid
     end
-
   end
 end
