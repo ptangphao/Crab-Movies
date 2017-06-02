@@ -128,8 +128,8 @@ text-decoration: none;
 
 .movie-partial{
   display: inline-block;
-  margin:auto;
   width:10em;
+  margin:auto;
   vertical-align: top;
   padding:1em;
 }
@@ -223,7 +223,7 @@ text-decoration: none;
 }
 
 .rating-stars{
-  width:4em;
+  width:8em;
   font-size: 130%;
   color:gold;
   display:inline-block;
@@ -253,3 +253,8 @@ text-decoration: none;
   color:gold;
   display:inline-block;
 }
+
+.comment{
+    width:20em;
+}
+
