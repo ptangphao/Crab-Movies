@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <% if type.class.to_s == "Review" %>
     <% if type.reviewable_type == "Movie" %>
-    <div class="movie-comment-form">
+    <div class="comment-form">
       <%= form_for([@movie, type, type.comments.build]) do |f| %>
         <%= f.text_area :body, size:"30x20" %><br>
         <%= f.hidden_field :user_id, value: current_user.id %>

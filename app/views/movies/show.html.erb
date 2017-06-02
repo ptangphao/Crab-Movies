@@ -23,9 +23,12 @@
     <% end %>
 
     <h2>Movie Reviews</h2>
+    <div class="all-reviews">
     <% if @movie.reviews %>
       <%= render @movie.reviews%>
+
     <% end %>
+    </div>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
   </div>
 
