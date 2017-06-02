@@ -14,8 +14,9 @@
 <p>Rate:</p>
   <%= render partial: '/ratings/rating_buttons', locals: {type: review} %>
 <% end %>
+<div class="comments">
+<%= render review.comments %>
+</div>
+<%= render partial: 'comments/form', locals: {type: review} %>
 </div>
 
-<h3>Comments</h3>
-<%= render review.comments %>
-<%= render partial: 'comments/form', locals: {type: review} %>
