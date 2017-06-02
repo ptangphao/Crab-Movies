@@ -4,7 +4,10 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.save
-    redirect_to @route
+    respond_to do |format|
+      format.html {redirect_to @route}
+      format.js
+    end
   end
 
   def destroy

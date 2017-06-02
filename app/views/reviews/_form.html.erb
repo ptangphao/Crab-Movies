@@ -1,5 +1,5 @@
 <% if user_signed_in? && current_user.reviewer? %>
-  <%= form_for([type, type.reviews.build]) do |f| %>
+  <%= form_for([type, type.reviews.build], remote: true) do |f| %>
     <%= f.text_area :body, size:"100x3" %><br>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :reviewable_type, value: session[:page_type] %>
