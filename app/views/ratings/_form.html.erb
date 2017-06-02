@@ -1,6 +1,6 @@
 <% if type.class.to_s == "Review" %>
   <% if type.reviewable_type == "Movie" %>
-    <%= form_for([@movie, type, type.ratings.build]) do |f| %>
+    <%= form_for([Movie.find(session[:page_id]), type, type.ratings.build]) do |f| %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :rateable_type, value: type.class.to_s %>
       <%= f.hidden_field :rateable_id, value: type.id %>
@@ -8,7 +8,7 @@
       <%= f.submit "☆", class: "star-button" %>
     <% end %>
   <% else %>
-    <%= form_for([@actor, type, type.ratings.build]) do |f| %>
+    <%= form_for([Actor.find(session[:page_id]), type, type.ratings.build]) do |f| %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :rateable_type, value: type.class.to_s %>
       <%= f.hidden_field :rateable_id, value: type.id %>
