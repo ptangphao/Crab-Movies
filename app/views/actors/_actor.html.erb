@@ -1,0 +1,5 @@
+<% if actor == movie.actors.last %>
+  <%= link_to("#{actor.name}", actor)  %>
+<% else %>
+  <%= link_to("#{actor.name} | ",   actor) %>
+<% end %>
