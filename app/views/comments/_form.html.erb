@@ -1,0 +1,32 @@
+<% if user_signed_in? %>
+  <% if type.class.to_s == "Review" %>
+    <% if type.commentable_type == "Movie" %>
+      <%= form_for([@movie, type, type.ratings.build]) do |f| %>
+        <%= f.text_area :body, size:"100x3" %><br>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :commentable_type, value: session[:page_type] %>
+        <%= f.hidden_field :commentable_id, value: session[:page_id] %>
+        <%= f.submit %>
+      <% end %>
+    <% else %>
+      <%= form_for([@actor, type, type.ratings.build]) do |f| %>
+        <%= f.text_area :body, size:"100x3" %><br>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :commentable_type, value: session[:page_type] %>
+        <%= f.hidden_field :commentable_id, value: session[:page_id] %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= form_for([type, type.ratings.build]) do |f| %>
+      <%= f.text_area :body, size:"100x3" %><br>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :commentable_type, value: session[:page_type] %>
+      <%= f.hidden_field :commentable_id, value: session[:page_id] %>
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
