@@ -15,6 +15,15 @@ describe Actor do
     it { is_expected.to have_many(:actor_movies)}
   end
 
+  describe "has validations" do
+    it 'is valid with a valid name' do
+      expect(actor).to be_valid
+    end
+    it 'is not valid without a name' do
+      actor.name = nil
+      expect(actor).to_not be_valid
+    end
+  end
 end
 
 

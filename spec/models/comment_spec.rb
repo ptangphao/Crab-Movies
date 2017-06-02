@@ -41,4 +41,26 @@ describe Comment do
       expect(t.macro == :belongs_to).to be_truthy
     end
   end
+
+    describe "validates" do
+    it "the presence of a user_id" do
+      comment.user_id = nil
+      expect(comment).to_not be_valid
+    end
+
+    it "the presence of a commentable_id" do
+      comment.commentable_id = nil
+      expect(comment).to_not be_valid
+    end
+
+    it "the presence of a commentable_type" do
+      comment.commentable_type = nil
+      expect(comment).to_not be_valid
+    end
+
+    it "the presence of a body" do
+      comment.body = nil
+      expect(comment).to_not be_valid
+    end
+  end
 end
