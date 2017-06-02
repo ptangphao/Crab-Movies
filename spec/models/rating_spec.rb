@@ -38,4 +38,27 @@ describe Rating do
       expect(t.macro == :belongs_to).to be_truthy
     end
   end
+
+  describe "has validations" do
+    it "validates presence of user_id" do
+      rating.user_id = nil
+      expect(rating).to_not be_valid
+    end
+
+    it "validates presence of rateable_id" do
+      rating.rateable_id = nil
+      expect(rating).to_not be_valid
+    end
+
+    it "validates presence of rateable_type" do
+      rating.rateable_type = nil
+      expect(rating).to_not be_valid
+    end
+
+    # it { should be_kind_of(Fixnum) }
+    it "validates presence of rating" do
+      rating.rating = nil
+      expect(rating).to_not be_valid
+    end
+  end
 end
