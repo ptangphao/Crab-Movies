@@ -20,11 +20,10 @@ imdb = ImdbParty::Imdb.new(:anonymize => true)
 # anonymous requests to prevent IP ban
 
 #The next one is the production version, it makes 250 API calls
-#top_250 = imdb.top_250.map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
+top_250 = imdb.top_250.map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
 #The next one is for development, it only makes 5 API calls.
-top_250 = imdb.top_250[0..9].map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
+# top_250 = imdb.top_250[0..20].map{|movie| movie[:imdb_id]} #gets imdb id for each of the top 250
 top_250_movies = top_250.map{|movie_id| imdb.find_movie_by_id(movie_id)}
-
 # Creating genres
 # only picks first genre and then selects only unique genres
 genres_of_top_250 = top_250_movies.map{|movie| movie.genres[0]}.uniq
@@ -54,6 +53,7 @@ genres_of_top_250.each {|genre| Category.create({name: genre})}
 
 actors_of_top_250 = top_250_movies.flat_map{|movie| movie.actors}
 actor_names_of_top_250 = actors_of_top_250.map{|actor|actor.name}.uniq
+#exception handling
 actor_names_of_top_250.each {|name| Actor.create({name: name})}
 
 # Create Movies
@@ -74,13 +74,15 @@ end
 
 # Create actor_movies
 
-top_250_movies.each_with_index do |movie, index|
-  current_movie_id = (index + 1)
+top_250_movies.each do |movie|
+  current_movie = Movie.find_by(title: movie.title)
   movie.actors.each do |actor|
-    current_actor = Actor.find_by(name: actor.name).id
-    ActorMovie.create({
-      actor_id: current_actor,
-      movie_id: current_movie_id
+    current_actor = Actor.find_by(name: actor.name)
+    if current_actor && current_movie
+      ActorMovie.create({
+        actor_id: current_actor.id,
+        movie_id: current_movie.id
       })
+    end
   end
 end

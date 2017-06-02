@@ -79,14 +79,19 @@ Rails.application.configure do
 
   #configured
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: 'localhost:3000'} #update this when we send to heroku
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'sitepoint-devise.herokuapp.com' } # to be updated
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'example.com',
+    port:                 465,
+    domain:               'gmail.com',
     user_name:            'crabbypaperclip@gmail.com',
     password:             'crabby#1',
     authentication:       'plain',
-    enable_starttls_auto: true  }
+    ssl:                  true,
+    tsl:                  true,
+    enable_starttls_auto: true
+  }
 end
