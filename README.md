@@ -39,7 +39,7 @@ Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for deta
 
 **Iliyan Ganevv** - [*Full Stack*](https://github.com/IliyanGanevv)
 
-See also the list of [https://github.com/earlsabal/paperclip/graphs/contributors] who participated in this project.
+See also the [list of](https://github.com/earlsabal/paperclip/graphs/contributors) who participated in this project.
 
 ## Acknowledgments
 
