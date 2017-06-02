@@ -6,6 +6,12 @@
     <p>Writer: <b><%= @movie.writer %></b></p>
     <p>Release Year: <b><%= @movie.year %></b></p>
     <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
+    <p>Plot: <%= @movie.plot %></p>
+
+    <video width="400" controls>
+    <source src="<%= @movie.trailer_url %>" type="video/mp4">
+    Your browser does not support HTML5 video.
+    </video>
 
     <h2>Movie Rating</h2>
     <p class="rating-stars"><%= rating(@movie) %></p>
