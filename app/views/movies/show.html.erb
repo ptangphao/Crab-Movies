@@ -7,21 +7,20 @@
     <p>Release Year: <b><%= @movie.year %></b></p>
     <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
 
+    <h2>Movie Rating</h2>
+    <p class="rating-stars"><%= rating(@movie) %></p>
+
+    <% if user_signed_in? %>
+    <p>Rate:</p>
+      <%= render partial: '/ratings/rating_buttons', locals: {type: @movie} %>
+    <% end %>
+
     <h2>Reviews</h2>
     <% if @movie.reviews %>
       <%= render @movie.reviews%>
     <% end %>
     <% if user_signed_in? %>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
-    <% end %>
-
-    <h2>Rating</h2>
-
-    <p class="rating-stars"><%= rating(@movie) %></p>  
-
-    <% if user_signed_in? %>
-    <p>Rate:</p>
-      <%= render partial: '/ratings/rating_buttons', locals: {type: @movie} %>
     <% end %>
   </div>
 </div>
