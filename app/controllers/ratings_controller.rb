@@ -1,6 +1,6 @@
 class RatingsController < ApplicationController
   def create
-    @rating = Rating.new(rating_params)
+    @rating = Rating.create(rating_params)
     redirect_to RedirectionService.new(session).route
   end
 

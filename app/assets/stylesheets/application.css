@@ -98,6 +98,8 @@ a{
   background-color:white;
   opacity: .88;
   border-radius: 10px;
+  /*text-align: center;*/
+
 }
 
 
@@ -115,12 +117,12 @@ a{
 
 .movie_link a{
  color: black;
-text-decoration: none; 
+text-decoration: none;
 }
 
 
 .movie-partial{
-  display: inline-block;  
+  display: inline-block;
   margin:auto;
   width:10em;
   vertical-align: top;
@@ -133,6 +135,7 @@ text-decoration: none;
 .show-container{
   text-align: center;
   padding-bottom: 1em;
+  padding-top:1em;
 }
 
 .review-display{
@@ -146,8 +149,8 @@ text-decoration: none;
   width:20em;
 }
 
-.login_signup{
-
+.lnew_user{
+  background-color: red;
 }
 
 .field{
@@ -157,3 +160,34 @@ text-decoration: none;
    content: "\2605";
    position: absolute;
 }
+
+.created_at{
+  font-size:75%;
+}
+
+.username{
+  font-size:75%;
+}
+
+.new_user{
+  width:20em;
+  margin:auto;
+  text-align:center;
+}
+
+/*.login_signup h2{
+  width:6em;
+  margin:auto;
+}*/
+
+.log_title{
+  width:7em;
+  margin:auto;
+  text-align: center; 
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+.actions{
+  padding-bottom:1em;
+}
+

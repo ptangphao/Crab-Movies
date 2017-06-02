@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :movies, only: [:show] do
-    resources :reviews
+    resources :reviews do
+      resources :ratings
+    end
+    resources :ratings
   end
   resources :categories, only: [:index, :show]
   resources :actors, only: [:index, :show] do
-    resources :reviews
+    resources :reviews do
+      resources :ratings
+    end
   end
   resources :comments
-
   root to:"categories#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

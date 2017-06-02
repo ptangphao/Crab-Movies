@@ -19,8 +19,11 @@
     <h2>Reviews</h2>
     <% if @movie.reviews %>
       <% @movie.reviews.each do |review| %>
+        <% user = User.find(review.user_id) %>
         <div class="review-display">
         <p><%= review.body %></p>
+        <p class="username"><%= user.email %></p>
+        <p class="created_at"><%= review.created_at.strftime("%A, %d %b %Y %l:%M %p") %></p>
         </div>
       <% end  %>
     <% end %>
@@ -29,10 +32,19 @@
     <% end %>
     <h2>Rating</h2>
     <div class="rating">
-      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    <% if user_signed_in? %>
+      <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 1} %></span>
+      <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 2} %></span>
+      <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 3} %></span>
+      <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 4} %></span>
+      <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 5} %></span>
+      <% end  %>
     </div>
     <% if user_signed_in? %>
     <p>Rate:</p>
+      <% @movie.ratings.each do |rating| %>
+        <%= rating.rating %>
+      <% end %>
     <% end %>
   </div>
 </div>
