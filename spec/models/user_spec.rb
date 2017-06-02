@@ -5,6 +5,8 @@ describe User do
     email: "koala@koala.com"
     })}
   it "sends an email" do
-    expect(user.send_user_mail).to change {ActionMailer::Base.deliveries.count}.by(1)
+    current_count = ActionMailer::Base.deliveries.count
+    user.send_user_mail
+    expect(ActionMailer::Base.deliveries.count).to eq (current_count + 1)
   end
 end
