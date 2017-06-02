@@ -20,7 +20,7 @@ describe Category do
     end
 
     it 'is not valid without a name' do
-      category.name = ''
+      category.name = nil
       expect(category).to_not be_valid
     end
   end
