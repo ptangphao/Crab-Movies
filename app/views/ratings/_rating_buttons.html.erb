@@ -1,0 +1,9 @@
+<div class="rating">
+  <% if user_signed_in? %>
+    <span><%= render partial: 'ratings/form', locals: {type: type, stars: 1} %></span>
+    <span><%= render partial: 'ratings/form', locals: {type: type, stars: 2} %></span>
+    <span><%= render partial: 'ratings/form', locals: {type: type, stars: 3} %></span>
+    <span><%= render partial: 'ratings/form', locals: {type: type, stars: 4} %></span>
+    <span><%= render partial: 'ratings/form', locals: {type: type, stars: 5} %></span>
+  <% end  %>
+</div>
