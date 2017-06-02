@@ -8,8 +8,8 @@
         <%= f.hidden_field :commentable_type, value: type.class.to_s %>
         <%= f.hidden_field :commentable_id, value: type.id %>
         <%= f.submit %>
-      </div>
       <% end %>
+    </div>
     <% else %>
     <div class="comment-form">
       <%= form_for([@actor, type, type.comments.build], class: "comment-form", remote: true) do |f| %>
@@ -19,7 +19,7 @@
         <%= f.hidden_field :commentable_id, value: type.id %>
         <%= f.submit %>
       <% end %>
-         </div>
+    </div>
     <% end %>
   <% else %>
   <div class="comment-form">
@@ -30,9 +30,9 @@
       <%= f.hidden_field :commentable_id, value: type.id %>
       <%= f.submit %>
     <% end %>
-       </div>
+  </div>
   <% end %>
 <% end %>
 
 
-, class: "comment-form", remote: true
+
