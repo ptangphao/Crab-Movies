@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :actors, only: [:index, :show] do
     resources :reviews
+
   end
   resources :comments
 resources :ratings
