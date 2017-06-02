@@ -19,7 +19,20 @@ describe CommentsController do
       expect(response).to have_http_status 302
     end
   end
-  describe 'DELETE #DESTROY' do
-
-  end
+  # describe 'DELETE #DESTROY' do
+  #   it "responds with status code 302" do
+  #     actor = Actor.create({
+  #       name: "Jeff"
+  #       })
+  #     comment = Comment.create({
+  #       user_id: 1,
+  #       commentable_id: actor.id,
+  #       commentable_type: "Movie",
+  #       body: "this movie is terrible"
+  #       })
+  #     @id = actor.id
+  #     delete :destroy, {id: comment.id}
+  #     expect(response).to have_http_status 302
+  #   end
+  # end
 end
