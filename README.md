@@ -9,19 +9,24 @@ This is a web application that is designed to allow people to rate and review fi
 
 ## Running the tests
 
-We have extensivly tested this repository to demonstrate the intent of our functionality and better articultae our motives, as well as track our feasibility. 
+We have extensivly tested this repository to demonstrate the intent of our functionality and better articultae our motives, as well as track the feasibility of our app. 
 
-### Break down into end to end tests
+### A break down of our tests
 
 Explain what these tests test and why
 
+In the terminal
 ```
-Give an example
+bundle
+be rake db:create
+be rake db:migrate
+be rspec
+# see all tests pass
 ```
 
 ## Contributing
 
-Please read [https://gist.github.com/PurpleBooth/b24679402957c63ec426] for details on our code of conduct, and the process for submitting pull requests to us.
+Please (read)[https://gist.github.com/PurpleBooth/b24679402957c63ec426] for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
