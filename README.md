@@ -2,7 +2,7 @@
 
 This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by provifding a platform that will foster unbiased opinions. 
 
-###Dependencies for local development:
+### Dependencies for local development:
 
 * Ruby (2.3.1)
 * Rails (4.2)
