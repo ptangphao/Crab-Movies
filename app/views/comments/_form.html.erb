@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <% if type.class.to_s == "Review" %>
     <% if type.reviewable_type == "Movie" %>
-      <%= form_for([@movie, type, type.comments.build]) do |f| %>
+      <%= form_for([@movie, type, type.comments.build], class: "comment-form", remote: true) do |f| %>
         <%= f.text_area :body, size:"100x3" %><br>
         <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.hidden_field :commentable_type, value: type.class.to_s %>
@@ -9,7 +9,7 @@
         <%= f.submit %>
       <% end %>
     <% else %>
-      <%= form_for([@actor, type, type.comments.build]) do |f| %>
+      <%= form_for([@actor, type, type.comments.build], class: "comment-form", remote: true) do |f| %>
         <%= f.text_area :body, size:"100x3" %><br>
         <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.hidden_field :commentable_type, value: type.class.to_s %>
@@ -18,7 +18,7 @@
       <% end %>
     <% end %>
   <% else %>
-    <%= form_for([type, type.comments.build]) do |f| %>
+    <%= form_for([type, type.comments.build], class: "comment-form", remote: true) do |f| %>
       <%= f.text_area :body, size:"100x3" %><br>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :commentable_type, value: type.class.to_s %>
