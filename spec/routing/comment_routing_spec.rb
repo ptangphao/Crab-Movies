@@ -6,4 +6,6 @@ RSpec.describe "Routing to comments", :type => :routing do
   end
 
   it "routes DELETE /comments/1 to comments#destroy"
+    expect(:delete => "/comments").to route_to("comments#destroy", :id => "1")
+  end
 end
