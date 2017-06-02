@@ -35,7 +35,10 @@ a{
   margin:auto;
   text-align: center;
   font-size: 430%;
+
 }
+
+
 
 
 .logs{
@@ -190,7 +193,7 @@ text-decoration: none;
 .log_title{
   width:7em;
   margin:auto;
-  text-align: center; 
+  text-align: center;
   padding-top:0.5em;
   padding-bottom:0.5em;
 }

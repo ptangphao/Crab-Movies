@@ -9,7 +9,10 @@
 </head>
 <body>
 <div class="header">
-  <h1 class="title">movies</h1>
+
+
+<h1 class="title" href='/'>m<%= link_to image_tag('film-161204_960_720.png', size: "40x40"), root_path %>vies</h1>
+
   <p class="home"><%= link_to "home", root_path %></p>
   <div class="logs">
   <% if user_signed_in? %>
