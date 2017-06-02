@@ -59,5 +59,7 @@ describe Movie do
       t = Movie.reflect_on_association(:actor_movies)
       expect(t.macro == :has_many).to be_truthy
     end
+    it { is_expected.to have_many(:ratings)}
+    it { is_expected.to have_many(:actor_movies)}
   end
 end
