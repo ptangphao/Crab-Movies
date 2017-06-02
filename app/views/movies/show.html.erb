@@ -16,7 +16,7 @@
     <% end %>
 
     <h2>Movie Rating</h2>
-    <%= rating(@movie) %>
+    <p class="rating-stars"><%= rating(@movie) %></p>
 
     <% if user_signed_in? %>
     <p>Rate:</p>

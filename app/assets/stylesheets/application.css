@@ -156,10 +156,10 @@ text-decoration: none;
 .field{
   width:20em;
 }
-.rating > span:hover:before {
+/*.rating > span:hover:before {
    content: "\2605";
    position: absolute;
-}
+}*/
 
 .created_at{
   font-size:75%;
@@ -191,3 +191,29 @@ text-decoration: none;
   padding-bottom:1em;
 }
 
+.rating{
+  width:20em;
+  margin:auto;
+}
+
+.new_rating{
+  width:2em;
+  display: inline-block;
+}
+
+.star-button{
+  border:none;
+  background-color: white;
+  font-size: 150%;
+  outline: none;
+}
+
+.star-button:hover{
+  color:gold;
+}
+
+.rating-stars{
+  padding:2px;
+  font-size: 130%;
+  color:gold;
+}
