@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       resources :comments, only: [:create, :destroy]
     end
     resources :ratings, only: [:create]
-    resources :comments, only: [:create, :destroy]
   end
 
   resources :categories, only: [:index, :show]
