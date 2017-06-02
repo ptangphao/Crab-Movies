@@ -26,7 +26,6 @@ describe Rating do
     end
   end
 
-
   describe "has associations" do
     it "should belong to a user" do
       t = Rating.reflect_on_association(:user)
@@ -36,6 +35,29 @@ describe Rating do
     it "should belong to a user" do
       t = Rating.reflect_on_association(:rateable)
       expect(t.macro == :belongs_to).to be_truthy
+    end
+  end
+
+  describe "has validations" do
+    it "has a user_id" do 
+      rating.user_id = nil
+      expect(rating).to_not be_valid
+    end
+
+    it "has a rateable_id" do 
+      rating.rateable_id = nil
+      expect(rating).to_not be_valid
+    end
+
+    it "has a rateable_type" do 
+      rating.rateable_type = nil
+      expect(rating).to_not be_valid
+    end
+
+    # it { should be_kind_of(Fixnum) }
+    it "has a rating" do 
+      rating.rating = nil
+      expect(rating).to_not be_valid
     end
   end
 end
