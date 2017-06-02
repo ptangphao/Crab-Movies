@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ReviewsController do
-  let!(:movie) {Movie.create!({
+  let (:movie) {Movie.create!({
               title: "The Dark Knight",
               director: "Christopher Nolan",
               writer: "Jonathan Nolan",
@@ -10,13 +10,34 @@ describe ReviewsController do
               category_id: 1
               })}
 
-  let!(:review) {Review.create!({
+  let (:review) {Review.create!({
               user_id: 1,
               reviewable_id: movie.id,
               reviewable_type: "Movie",
               body: "This movie is worth watching."
               })}
 
+  describe "validations" do
+    it "should test for a review to have a user who wrote it" do 
+      review.user_id = nil
+      expect(review).to_not be_valid
+    end
+
+    it "should test for a review to have a polyomorphic reviewable_id" do 
+      review.reviewable_id = nil
+      expect(review).to_not be_valid
+    end
+
+    it "should not allow reviewable_id's to be blank" do 
+      review.reviewable_type = nil
+      expect(review).to_not be_valid
+    end
+
+    it "should not permit body's to be blank" do
+      review.body = nil
+      expect(review).to_not be_valid
+    end
+  end
   # describe 'post#create' do
   #   it "responds with a status code 302 when valid params are passed" do
   #     post(:create, { new_movie_review: {user_id: 1,
@@ -34,4 +55,7 @@ describe ReviewsController do
   #     expect(response).to have_http_status 302
   #   end
   # end
+
+
+
 end
