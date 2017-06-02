@@ -5,7 +5,7 @@ describe Movie do
     Category.new({name: "horror"})
   }
   let (:movie) {
-    Movie.new({
+    Movie.create({
               title: "The Dark Knight",
               director: "Christopher Nolan",
               writer: "Jonathan Nolan",
@@ -58,6 +58,42 @@ describe Movie do
     it "should have many actor_movies" do
       t = Movie.reflect_on_association(:actor_movies)
       expect(t.macro == :has_many).to be_truthy
+    end
+    it { is_expected.to have_many(:ratings)}
+    it { is_expected.to have_many(:actor_movies)}
+  end
+
+  describe "has validations" do
+
+    it 'is not valid without a title' do
+      movie.title = ''
+      expect(movie).to_not be_valid
+    end
+
+
+    it 'is not valid without a writer' do
+      movie.writer = ''
+      expect(movie).to_not be_valid
+    end
+
+    it 'is not valid without a director' do
+      movie.director = ''
+      expect(movie).to_not be_valid
+    end
+
+    it 'is not valid without a year' do
+      movie.year = ''
+      expect(movie).to_not be_valid
+    end
+
+    it 'is not valid without a poster_url' do
+      movie.poster_url = ''
+      expect(movie).to_not be_valid
+    end
+
+    it 'is not valid without a category_id' do
+      movie.category_id = ''
+      expect(movie).to_not be_valid
     end
   end
 end

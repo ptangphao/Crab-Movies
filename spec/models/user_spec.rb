@@ -9,4 +9,5 @@ describe User do
     user.send_user_mail
     expect(ActionMailer::Base.deliveries.count).to eq (current_count + 1)
   end
+  it { is_expected.to validate_presence_of(:password).on(:create) }
 end
