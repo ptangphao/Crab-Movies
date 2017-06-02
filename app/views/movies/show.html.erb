@@ -40,12 +40,12 @@
       <span><%= render partial: 'ratings/form', locals: {type: @movie, stars: 5} %></span>
       <% end  %>
     </div>
-    <% if user_signed_in? %>
+    
     <p>Rate:</p>
       <% @movie.ratings.each do |rating| %>
         <%= rating.rating %>
       <% end %>
-    <% end %>
+  
   </div>
 </div>
 
