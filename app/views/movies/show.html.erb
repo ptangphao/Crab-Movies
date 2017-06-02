@@ -5,34 +5,22 @@
     <p>Director: <b><%= @movie.director %></b></p>
     <p>Writer: <b><%= @movie.writer %></b></p>
     <p>Release Year: <b><%= @movie.year %></b></p>
+    <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
 
-    <p>
-      Actors:
-      <% @movie.actors.each do |actor| %>
-        <% if actor == @movie.actors.last %>
-          <%= link_to("#{actor.name}", actor)  %>
-        <% else %>
-          <%= link_to("#{actor.name} | ",   actor) %>
-        <% end %>
-      <% end %>
-    </p>
+    <h2>Movie Rating</h2>
+    <p class="rating-stars"><%= rating(@movie) %></p>
+
+    <% if user_signed_in? %>
+    <p>Rate:</p>
+      <%= render partial: '/ratings/rating_buttons', locals: {type: @movie} %>
+    <% end %>
+
     <h2>Reviews</h2>
     <% if @movie.reviews %>
-      <% @movie.reviews.each do |review| %>
-        <div class="review-display">
-        <p><%= review.body %></p>
-        </div>
-      <% end  %>
+      <%= render @movie.reviews%>
     <% end %>
     <% if user_signed_in? %>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
-    <% end %>
-    <h2>Rating</h2>
-    <div class="rating">
-      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-    </div>
-    <% if user_signed_in? %>
-    <p>Rate:</p>
     <% end %>
   </div>
 </div>
