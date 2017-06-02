@@ -254,7 +254,14 @@ text-decoration: none;
   display:inline-block;
 }
 
-.comment{
-    width:20em;
+.comments{
+  width:20em;
+  vertical-align: top;
+  display: inline-block;
 }
 
+.comment-form{
+  width:20em;
+  display: inline-block;
+
+}
