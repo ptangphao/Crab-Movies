@@ -66,7 +66,9 @@ top_250_movies.each do |movie|
     director:    movie.directors[0].name,
     year:        movie.release_date[0..3],
     category_id: genres_of_top_250.index(movie.genres[0]) + 1,
-    poster_url: movie.poster_url})
+    trailer_url: movie.trailer_url,
+    plot:        movie.plot,
+    poster_url:  movie.poster_url})
 end
 
 # Create actor_movies
