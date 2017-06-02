@@ -23,12 +23,12 @@
     <% end %>
 
     <h2>Movie Reviews</h2>
+    <div class="all-reviews">
     <% if @movie.reviews %>
       <%= render @movie.reviews%>
-<!--   <h3>Comments</h3>
-  <%= render @movie.comments %>
-  <%= render partial: 'comments/form', locals: {type: @movie} %> -->
+
     <% end %>
+    </div>
     <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
   </div>
 
