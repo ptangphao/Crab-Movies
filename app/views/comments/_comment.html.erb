@@ -1,0 +1,13 @@
+<div class="comment">
+<div class="comment-display">
+  <p class="comment-body"><%= comment.body %></p>
+  <p class="username"><%= comment.user.email %></p>
+  <% if comment.commentable.user == current_user %>
+    <% if session[:page_type] == "Actor" %>
+      <%= link_to 'Delete Comment', actor_review_comment_path(Actor.find(session[:page_id]),comment.commentable, comment), method: :delete %>
+    <% else %>
+      <%= link_to 'Delete Comment', movie_review_comment_path(Movie.find(session[:page_id]),comment.commentable, comment), method: :delete %>
+    <% end %>
+  <% end %>
+</div>
+</div>

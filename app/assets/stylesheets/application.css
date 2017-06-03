@@ -13,3 +13,255 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  background-image: url("https://unsplash.it/1900/1200?image=579");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-size: cover;
+}
+
+a{
+  text-decoration: none;
+}
+.header{
+  height:7em;
+}
+
+.title{
+  letter-spacing: 0.02em;
+  font-family: Raleway, Arial;
+  -webkit-font-smoothing: antialiased;
+  color:white;
+  width:13em;
+  margin:auto;
+  text-align: center;
+  font-size: 430%;
+
+}
+
+
+.logs{
+  width:12em;
+  float: right;
+  margin:-55px 30px 0px 0px;
+  text-align:center;
+}
+.logs p {
+  font-family: Raleway, Arial;
+  color:lightgrey;
+  display: inline-block;
+  padding-right:10px;
+  font-size:120%;
+}
+.logs a {
+  font-family: Raleway, Arial;
+  color:lightgrey;
+  display: inline-block;
+  font-size:120%;
+  text-decoration: none
+}
+
+.home a{
+  font-family: Raleway, Arial;
+  float:left;
+  text-decoration: none;
+  color:lightgrey;
+  font-size:160%;
+  margin-top:-44px;
+  margin-left: 4.4em;
+}
+
+.categories_list{
+  width:70%;
+  margin:auto;
+  text-align:center;
+}
+.categories_list p{
+  font-family: Raleway, Arial;
+  display: inline-block;
+  font-size:300%;
+  width:5em;
+  height:1.5em;
+  background-color:white;
+  padding-top:15px;
+  opacity: .7;
+  margin-left:1em;
+  border-radius: 10px;
+}
+.categories_list a{
+  color: black;
+  text-decoration: none;
+}
+
+.body-wrapper{
+  font-family: Raleway, Arial;
+  width:70%;
+  margin:auto;
+  background-color:white;
+  opacity: .88;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.movie-pic {
+  height: 20em;
+  width: 10em;
+  display: inline-block;
+  box-shadow: 8px 8px 5px #888888;
+  border-radius: 5px;
+}
+
+.minor-title {
+  font-family: Raleway, Arial;
+  text-align: center;
+}
+
+
+.movie_link a{
+ color: black;
+text-decoration: none;
+}
+
+
+.movie-partial{
+  display: inline-block;
+  width:10em;
+  margin:auto;
+  vertical-align: top;
+  padding:1em;
+}
+.movie-partial a{
+  text-decoration: none;
+}
+
+.show-container{
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top:1em;
+}
+
+.review{
+  width:55em;
+  border-bottom:solid;
+  margin:auto;
+  border-width:1px;
+}
+
+.review-display{
+  width:55em;
+  margin:auto;
+}
+
+.login_title{
+  width:20em;
+}
+
+.lnew_user{
+  background-color: red;
+}
+
+.field{
+  width:20em;
+}
+/*.rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}*/
+
+.created_at{
+  font-size:75%;
+}
+
+.username{
+  font-size:75%;
+}
+
+.new_user{
+  width:20em;
+  margin:auto;
+  text-align:center;
+}
+
+/*.login_signup h2{
+  width:6em;
+  margin:auto;
+}*/
+
+.log_title{
+  width:7em;
+  margin:auto;
+  text-align: center;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+.actions{
+  padding-bottom:1em;
+}
+
+.rating{
+  width:20em;
+  margin:auto;
+}
+
+.new_rating{
+  width:2em;
+  display: inline-block;
+}
+
+.star-button{
+  border:none;
+  background-color: white;
+  font-size: 150%;
+  outline: none;
+}
+
+.star-button:hover{
+  color:gold;
+}
+
+.rating-stars{
+  width:8em;
+  font-size: 130%;
+  color:gold;
+  display:inline-block;
+}
+
+.movie-plot{
+  width:50em;
+  margin:auto;
+  border-bottom:solid;
+  border-width:0.5px;
+}
+
+.rating-title{
+  width:7em;
+  display:inline-block;
+  font-size: 90%;
+}
+
+.review-rating{
+  width:30em;
+  margin:auto;
+}
+
+.review-rating-stars{
+  width:4em;
+  font-size: 100%;
+  color:gold;
+  display:inline-block;
+}
+
+.comments{
+  width:20em;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.comment-form{
+  width:20em;
+  display: inline-block;
+
+}

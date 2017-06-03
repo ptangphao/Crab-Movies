@@ -1,0 +1,12 @@
+<div class="body-wrapper">
+  <div class="show-container">
+  <h1 class="minor-title"><%= @actor.name %></h1>
+  <%= render @actor.movies %>
+
+  <h2>Actor Reviews</h2>
+  <div class="all-reviews">
+  <% if @actor.reviews %>
+    <%= render @actor.reviews %>
+  <% end %>
+  </div>
+  <%= render partial: 'reviews/form', locals: {type: @actor} %><br>

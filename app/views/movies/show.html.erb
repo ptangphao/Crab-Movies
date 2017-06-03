@@ -1,0 +1,36 @@
+<div class="body-wrapper">
+  <div class="show-container">
+    <h1 class="minor-title"><%= @movie.title  %></h1>
+    <img class="movie-pic" src="<%=   @movie.poster_url %>">
+    <p>Director: <b><%= @movie.director %></b></p>
+    <p>Writer: <b><%= @movie.writer %></b></p>
+    <p>Release Year: <b><%= @movie.year %></b></p>
+    <p>Actors: <%= render partial: @movie.actors, locals: {movie: @movie} %></p>
+
+    <p class="movie-plot"><%= @movie.plot %></p><br>
+
+    <video width="600" controls>
+    <source src="<%= @movie.trailer_url %>" type="video/mp4">
+    <img src="<%= @movie.trailer_photo_url %>">
+    </video>
+
+    <h2>Movie Rating</h2>
+    <p class="rating-stars"><%= rating(@movie) %></p>
+
+    <% if user_signed_in? %>
+    <p>Rate:</p>
+      <%= render partial: '/ratings/rating_buttons', locals: {type: @movie} %>
+    <% end %>
+
+    <h2>Movie Reviews</h2>
+    <div class="all-reviews">
+    <% if @movie.reviews %>
+      <%= render @movie.reviews%>
+
+    <% end %>
+    </div>
+    <%= render partial: 'reviews/form', locals: {type: @movie} %><br>
+  </div>
+
+</div>
+

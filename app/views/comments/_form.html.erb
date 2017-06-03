@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+  <% if type.class.to_s == "Review" %>
+    <% if type.reviewable_type == "Movie" %>
+    <div class="comment-form">
+      <%= form_for([Movie.find(session[:page_id]), type, type.comments.build], remote: true) do |f| %>
+        <%= f.text_area :body, size:"30x20" %><br>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :commentable_type, value: type.class.to_s %>
+        <%= f.hidden_field :commentable_id, value: type.id %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <% else %>
+    <div class="comment-form">
+      <%= form_for([Actor.find(session[:page_id]), type, type.comments.build], remote: true) do |f| %>
+        <%= f.text_area :body, size:"30x20" %><br>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :commentable_type, value: type.class.to_s %>
+        <%= f.hidden_field :commentable_id, value: type.id %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <% end %>
+  <% else %>
+  <div class="comment-form">
+    <%= form_for([type, type.comments.build], remote: true) do |f| %>
+      <%= f.text_area :body, size:"30x20" %><br>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :commentable_type, value: type.class.to_s %>
+      <%= f.hidden_field :commentable_id, value: type.id %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
+
+
+

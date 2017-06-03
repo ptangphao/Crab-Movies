@@ -1,0 +1,22 @@
+<div class="review">
+  <div class="review-display">
+    <p><%= review.body %></p>
+    <p class="username"><%= review.user.email %></p>
+    <p class="created_at"><%= review.created_at.strftime("%A,   %d %b %Y %l:%M %p") %></p>
+  </div>
+  
+  <div class="review-rating">
+  
+    <p class="review-rating-stars"><%= rating(review) %></p>
+  </div>
+  
+  <% if user_signed_in? %>
+  <p>Rate:</p>
+    <%= render partial: '/ratings/rating_buttons', locals: {  type: review} %>
+  <% end %>
+  <div class="comments">
+    <%= render review.comments %>
+  </div>
+  <%= render partial: 'comments/form', locals: {type: review}   %>
+</div>
+
