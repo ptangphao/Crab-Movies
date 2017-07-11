@@ -18,8 +18,8 @@ Upon opening the web application, users are able to see categories of movies.
 </p>
 
 <p align="center">
-<img src="/screenshots/movie-show-1.png">
-<img src="/screenshots/movie-show-2.png">
+<img src="/screenshots/movie-show1.png">
+<img src="/screenshots/movie-show2.png">
 Users are able to obtain information regarding movies including plot summaries, actors, and even view a trailer belonging to the movie (hosted on AWS). Registered users can rate movies as well as reviews, and users who are authorized reviewers are able to write reviews on movies.
 </p>
 
