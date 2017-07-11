@@ -1,28 +1,47 @@
-# Crab-Movies
+Crab-Movies
+===
 
-This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by providing a platform that will foster unbiased opinions. Data was obtained was through IMDB.
+## Description
 
+Crab Movies is a Ruby on Rails application that allows users to obtain information regarding films as well as rate and review movies and actors. Data was obtained from IMDB.
 
+## Interface
+
+<p align="center">
 ![](screenshots/index.png?raw=true)
-![](screenshots/movie-index.png?raw=true)
+Upon opening the web application, users are able to see categories of movies.
+</p>
+
+<p align="center">
+  ![](screenshots/movies-index.png?raw=true)
+  After selecting a category, users are able to see movies that belong to the category.  
+</p>
+
+<p align="center">
 ![](screenshots/movie-show-1.png?raw=true)
 ![](screenshots/movie-show-2.png?raw=true)
+Users are able to obtain information regarding movies including plot summaries, actors, and even view a trailer belonging to the movie (hosted on AWS). Registered users can rate movies as well as reviews, and users who are authorized reviewers are able to write reviews on movies.
+</p>
+
+<p align="center">
 ![](screenshots/actor-show.png?raw=true)
+Users are able to view actors based on their movies, and registered users can leave ratings. Reviews of actors can be left by authorized reviewers.
+</p>
+
+## The Team
+
+[Patrick Tangphao](https://github.com/ptangphao)
+
+[Earl Sabal](https://github.com/earlsabal)
+
+[Ian Driscoll](https://github.com/iand11)
+
+[Ilyin Ganevv](https://github.com/IliyanGanevv)
+
+[Gina Benavidez](https://github.com/gbenavid)
+
 
 ### Dependencies for local development:
 
 * Ruby (2.3.1)
 * Rails (4.2)
-
-## Authors
-
-**Gina Benavidez** - [*Front End*](https://github.com/gbenavid)
-
-**Ian Driscoll** - [*Front End*](https://github.com/iand11)
-
-**Earl Sabal** - [*Back End*](https://github.com/earlsabal)
-
-**Patrick Tangphao** - [*Back End*](https://github.com/ptangphao)
-
-**Iliyan Ganevv** - [*Full Stack*](https://github.com/IliyanGanevv)
-
