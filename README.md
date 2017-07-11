@@ -1,47 +1,18 @@
 # Crab-Movies
 
-This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by providing a platform that will foster unbiased opinions. 
+This is a web application that is designed to allow people to rate and review films. By registering with our site, we permit users to rate and review movie titles, actors and actresses as well as comment. The goal of this application is to help people traverse their movie decisions by providing a platform that will foster unbiased opinions. Data was obtained was through IMDB.
+
+
+![](screenshots/index.png?raw=true)
+![](screenshots/movie-index.png?raw=true)
+![](screenshots/movie-show-1.png?raw=true)
+![](screenshots/movie-show-2.png?raw=true)
+![](screenshots/actor-show.png?raw=true)
 
 ### Dependencies for local development:
 
 * Ruby (2.3.1)
 * Rails (4.2)
-
-## Running the tests
-
-We have extensivly tested this repository to demonstrate the intent of our functionality and better articultae our motives, as well as track the feasibility of our app. 
-
-### A break down of our tests
-
-In the terminal
-```
-bundle
-be rake db:create
-be rake db:migrate
-be rspec
-```
-
-All tests should pass
-Or you can run:
-
-```
-be rspec ./spec/models/
-```
-...to see all specs related to our models.
-Or run 
-
-```
-be rspec ./spec/mailers/
-```
-...to see all specs related to our mailers
-
-We also have tests for our `controllers`, `helpers` and `routes`.
-Thanks for testing us!
-
-## Contributing
-
-Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 
 ## Authors
 
@@ -55,4 +26,3 @@ Please [read](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for deta
 
 **Iliyan Ganevv** - [*Full Stack*](https://github.com/IliyanGanevv)
 
-See also the [list of](https://github.com/earlsabal/paperclip/graphs/contributors) who participated in this project.
